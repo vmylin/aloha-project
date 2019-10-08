@@ -374,7 +374,11 @@ footer .store p,
 
 /* HEADER AREA */
 
-
+.header-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
 .header-img
  {
     max-width: 120px;
@@ -393,13 +397,14 @@ max-height: 50px;
     padding: 10px 10px 10px 10px;
 
 }
-
 .nav-items {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    min-width: 480px;
     border-top: 1px solid grey;
-margin: 0 8px;
+    margin: 0 8px;
+
 }
 
 .nav-items li a { /* inline-block is used here to make the clickable area "larger"*/
@@ -440,14 +445,12 @@ margin: 0 8px;
     }
 
     /* HEADER AREA */
-.header-container, .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 25px;
-}
 
-
+.header-container {
+display: flex;
+}        
+    
+        
 
     /* FOOTER AREA */
 
