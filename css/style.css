@@ -91,10 +91,6 @@ a {
 /* breakpoint in 1240 and 600 and 500*/
 /* LAYOUT */
 
-.container {
-    width: %;
-    margin: 0 auto; /* to center the element! */
-}
 
 .small-container {
     width: 720px;
@@ -496,8 +492,11 @@ max-height: 50px;
         background-color: green;
     }
 
-
-
+    .container {
+        width: 1240px;
+        margin: 0 auto; /* to center the element! */
+    }
+    
     
     
 }
