@@ -5,14 +5,6 @@ html {
     box-sizing: border-box;
 }
 
-/* html,body
-{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
-} */
 
 *, 
 *:before, 
@@ -21,6 +13,10 @@ html {
 }
 
 /* Typography */
+
+html {
+    font-size: 14px;
+}
 
 .uppercase {
     text-transform: uppercase;
@@ -56,7 +52,7 @@ h3 {
 
 p {
     font-family: 'Raleway';
-    font-size: .875em;
+    font-size: 1.15rem;
     color: #2d2d2d;
     font-weight: 100;
 }
@@ -74,7 +70,7 @@ span {
 
 .season {
     font-family: 'Playfair Display', 'Times New Roman', Times, serif;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 a {
@@ -139,17 +135,6 @@ margin: 0 auto; /* to center the element! */
     padding: 40px 25px;
 } */
 
-/* banner area */
-
-.banner {
-    padding: 270px 0;
-    /* you can put in multiple bg images */background-image: url(../images/banner-girl.png),url(../images/flower-bkgd.jpg);
-    background-repeat: no-repeat, repeat;
-    background-position: center 105px,center center;
-    background-size: contain;
-    background-color: linear-gradient(180deg, rgba(0,0,0,.25));
-    color: white;
-}
 
 /* about area */
 
@@ -348,6 +333,33 @@ max-height: 50px;
     
     padding: 20px 25px;
 }
+
+/* banner area */
+
+.banner {
+    padding: 20px 0;
+    height: 400px;
+    /* you can put in multiple bg images */background-image: url(../images/banner-girl.png),url(../images/flower-bkgd.jpg);
+    background-repeat: no-repeat, repeat-x;
+    background-position: /* position banner girl because it's the first image */center 24px,top;
+    background-size: contain, 619px;
+    background-color: linear-gradient(180deg, rgba(0,0,0,.25));
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner p {
+    margin-bottom: 1.5rem;
+}
+
+.banner-desc {
+    position: absolute;
+    top: 160px;
+}
+
 
 /* FOOTER AREA */
 
