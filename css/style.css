@@ -6,7 +6,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 *, 
 *:before, 
 *:after {
@@ -98,82 +97,125 @@ margin: 0 auto; /* to center the element! */
     text-align: center;
 }
 
-/* header area */
 
-/* .header-container, .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 25px;
+/* TRUE MOBILE SITE */
+
+/* HEADER AREA */
+
+.header-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
 }
 
-.logo {
-    flex-basis:25%;
-}
-
-.header-img {
-    width: 50%;
-}
-
-.shopping-cart {
-    order: 1;
-    flex-basis: 25%;
-    text-align: right;
+.header-img
+ {
+    max-width: 120px;
 }
 
 .cart-img {
-    width: 20%;
+align-self: flex-end;
+flex: 0 1 50%;
+max-height: 50px;
 }
 
+.menu-icons {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 15px 15px 10px;
+
+}
+.nav-bar {
+    border-top: 1px solid #d7d7d7;
+    justify-content: center;
+    margin: 0 auto;
+
+}
 .nav-items {
     display: flex;
     flex-direction: row;
-    flex-grow: 1;
+    justify-content: space-around;
 }
 
-/* .nav-items li a { /* inline-block is used here to make the clickable area "larger"*/
-    /* display: inline-block;
-    padding: 40px 25px;
-} */
+
+.nav-items li a { /* inline-block is used here to make the clickable area "larger"*/
+    display: inline-block; 
+    
+    padding: 20px 25px;
+}
+/* END OF HEADER AREA */
 
 
-/* about area */
+/* BANNER AREA */
+
+.banner {
+    padding: 20px 0;
+    height: 400px;
+    /* you can put in multiple bg images */background-image: url(../images/banner-girl.png),url(../images/flower-bkgd.jpg);
+    background-repeat: no-repeat, repeat-x;
+    background-position: /* position banner girl because it's the first image */center 24px,top;
+    background-size: contain, 619px;
+    background-color: linear-gradient(180deg, rgba(0,0,0,.25));
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner p {
+    margin-bottom: 1.5rem;
+}
+
+.banner-desc {
+    position: absolute;
+    top: 160px;
+}
+/* END OF BANNER AREA */
+
+/* ABOUT AREA */
 
 .styles {
-    padding: 100px;
+    padding: 100px 0;
 }
 
+.styles h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+}
 .styles p {
+    font-size: 1.15rem; 
     padding-bottom: 15px;
 }
-/* shop area */
+
+
+/* END OF ABOUT AREA */
+
+/* SHOP AREA */
 
 .shop-category {
-    /* padding: 0; */
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
 }
 
-.wide-category.category-men {
+.category {
     width: 50%;
-    border: 4px solid white;
-    border-left: 0;
+    height: 50vw;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.wide-category.category-women {
-    width: 50%;
-    border: 4px solid white;
-    border-right: 0;
-}
-
-.sq-category.category-sale {
-    width: 25%;
-    border: 4px solid white;
-    border-left: 0;
+.category:nth-of-type(1),
+.category:nth-of-type(6) {/* nth-of-type allows selecting 1 or more elements based on order in html*/
+width: 100%;
+height: 50vw;
 }
 
 .category-men {
-    padding: 100px;
     background-image: url(../images/mens-category.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -181,7 +223,6 @@ margin: 0 auto; /* to center the element! */
 }
 
 .category-trend {
-    padding: 100px ;
     background-image: url(../images/trends-category.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -189,24 +230,20 @@ margin: 0 auto; /* to center the element! */
 }
 
 .category-glasses {
-    padding: 100px ;
     background-image: url(../images/glasses-category.jpg);
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover, cover;
+    background-size: cover;
 }
 
 .category-sale {
-    padding: 100px ;
     background-image: url(../images/sale-category.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    height: 30%;
 }
 
 .category-bag {
-    padding: 100px ;
     background-image: url(../images/bags-category.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -214,12 +251,31 @@ margin: 0 auto; /* to center the element! */
 }
 
 .category-women {
-    padding: 100px ;
     background-image: url(../images/womens-category.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 }
+
+
+/* END OF SHOP AREA */
+
+/* FEATURED AREA */
+
+.featured {
+    padding-top: 110px;
+}
+
+
+/* Flickity Slider */
+
+/* mobile style */
+.carousel-cell {
+    width: 100%;
+    text-align: center;
+}
+  
+/* END OF FEATURED AREA */
 
 /* updates area */
 
@@ -230,15 +286,16 @@ margin: 0 auto; /* to center the element! */
     background-repeat: no-repeat;
     background-position: center -550px;
     height: 327px;
+
+}
+.updates h2 {
+margin-bottom: 1.5rem;  
 }
 
-.paragraph-box p {
+.updates p {
     color: white;
     padding: 5px 0;
-}
-
-.paragraph-box {
-    padding-bottom: 30px;
+    font-size: 1.14rem;
 }
 
 .sign-up {
@@ -281,100 +338,6 @@ input[type="submit"]:hover {
 }
 
 
-/* This part is the true mobile site */
-
-/* HEADER AREA */
-
-.header-container {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-}
-
-.header-img
- {
-    max-width: 120px;
-}
-
-.cart-img {
-align-self: flex-end;
-flex: 0 1 50%;
-max-height: 50px;
-}
-
-.menu-icons {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    padding: 10px 15px 15px 10px;
-
-}
-.nav-bar {
-    border-top: 1px solid #d7d7d7;
-    justify-content: center;
-    margin: 0 auto;
-
-}
-.nav-items {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-/* border-top: 1px solid #d7d7d7; */
-}
-
-
-.nav-items li a { /* inline-block is used here to make the clickable area "larger"*/
-    display: inline-block; 
-    
-    padding: 20px 25px;
-}
-/* End of header area */
-
-/* featured area */
-
-.featured {
-    padding-top: 110px;
-}
-
-
-/* Flickity Slider */
-
-/* mobile style */
-.carousel-cell {
-    width: 100%;
-    text-align: center;
-}
-  
-  
-/* End of featured area */
-
-/* BANNER AREA */
-
-.banner {
-    padding: 20px 0;
-    height: 400px;
-    /* you can put in multiple bg images */background-image: url(../images/banner-girl.png),url(../images/flower-bkgd.jpg);
-    background-repeat: no-repeat, repeat-x;
-    background-position: /* position banner girl because it's the first image */center 24px,top;
-    background-size: contain, 619px;
-    background-color: linear-gradient(180deg, rgba(0,0,0,.25));
-    color: white;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.banner p {
-    margin-bottom: 1.5rem;
-}
-
-.banner-desc {
-    position: absolute;
-    top: 160px;
-}
-/* END OF BANNER AREA */
-
 /* FOOTER AREA */
 
 .footer-container {
@@ -386,7 +349,6 @@ max-height: 50px;
 
 .social-name { 
     display: none;
-
 }
 
 .social {
@@ -459,8 +421,9 @@ footer .store p,
     padding: 0 30px 15px 0;
 } 
 
-
 /* END OF MOBILE SITE */
+
+/* START OF @MEDIA 600 */
 
 @media screen and (min-width: 600px) {
     body {
@@ -491,6 +454,29 @@ footer .store p,
 }
 /* END OF HEADER AREA */
 
+/* START OF SHOP AREA */
+
+.category {
+    width: 25%;
+    height: 25vw;
+}
+
+.category:nth-of-type(1),
+.category:nth-of-type(4) {
+border-left: 0;
+}
+
+.category:nth-of-type(3n) {
+    border-right: 0;
+}
+
+.category:nth-of-type(1),
+.category:nth-of-type(6) {
+    width: 50%;
+    height: 25vw;
+}
+/* END OF SHOP AREA */
+
 /* START OF FEATURED AREA */
 
 .carousel-cell {
@@ -498,6 +484,18 @@ footer .store p,
     text-align: center;
 }
 /* END OF FEATURED AREA */
+
+
+/* UPDATES AREA */
+
+.wrapper {
+    max-width: 720px;
+    margin: 0 auto;
+}    
+
+/* END OF UPDATES AREA */
+
+
     /* FOOTER AREA */
 
     .site-footer {
@@ -584,7 +582,6 @@ footer .store p,
     padding: 0 30px 15px 0;
 } 
 
-
 } /* END OF @MEDIA 600 */
 
 /* BEGINNING OF @MEDIA 1240 */
@@ -602,8 +599,12 @@ footer .store p,
         width: 25%;
         text-align: center;
     }
-    
+
+    .wrapper {
+        width: 720px;
+    }    
     
 }
 
 /* END OF @MEDIA 1240*/
+/* END OF CSS */
