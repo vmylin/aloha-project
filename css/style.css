@@ -3,6 +3,7 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 
@@ -220,12 +221,6 @@ margin: 0 auto; /* to center the element! */
     background-size: cover;
 }
 
-/* featured area */
-
-.featured {
-    padding-top: 110px;
-}
-
 /* updates area */
 
 .updates {
@@ -333,8 +328,27 @@ max-height: 50px;
     
     padding: 20px 25px;
 }
+/* End of header area */
 
-/* banner area */
+/* featured area */
+
+.featured {
+    padding-top: 110px;
+}
+
+
+/* Flickity Slider */
+
+/* mobile style */
+.carousel-cell {
+    width: 100%;
+    text-align: center;
+}
+  
+  
+/* End of featured area */
+
+/* BANNER AREA */
 
 .banner {
     padding: 20px 0;
@@ -359,7 +373,7 @@ max-height: 50px;
     position: absolute;
     top: 160px;
 }
-
+/* END OF BANNER AREA */
 
 /* FOOTER AREA */
 
@@ -381,7 +395,72 @@ max-height: 50px;
     justify-content: center;
 }
 
+footer {
+    background-color: #242424;
+    position: relative;
+}
 
+footer .store p,
+ .social a,
+ .contact p,
+ .contact a {
+    color: white;
+}
+
+.store  {
+    padding-bottom: 20px;
+}
+
+.store p, .location p {
+    padding-bottom: 5px;
+}
+
+.contact a {
+    text-decoration: underline;
+}
+
+.social span {
+    font-weight: lighter;
+}
+
+.find-us,
+.social {
+    padding:20px;
+}
+
+.site-footer {
+    padding: 50px 30px;
+}
+
+.find-us p,
+.find-us a {
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+}
+
+.location {
+    padding-top: 20px;
+}
+
+.location p {
+    color: #969696; 
+
+}
+
+.footer-container {
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1240px;
+}
+
+.fab {
+    width:20px;
+    padding: 0 30px 15px 0;
+} 
+
+
+/* END OF MOBILE SITE */
 
 @media screen and (min-width: 600px) {
     body {
@@ -410,7 +489,15 @@ max-height: 50px;
 .shopping-cart {
     order: 1;
 }
+/* END OF HEADER AREA */
 
+/* START OF FEATURED AREA */
+
+.carousel-cell {
+    width: 50%;
+    text-align: center;
+}
+/* END OF FEATURED AREA */
     /* FOOTER AREA */
 
     .site-footer {
@@ -428,77 +515,79 @@ max-height: 50px;
     display: flex;
     flex-direction: column;
 }
-    .social-name {
-        display: inline;
-    }
+.social-name {
+    display: inline;
 }
 
-    /* FOOTER AREA */
-    footer {
-        background-color: #242424;
-        position: relative;
-    }
-    
-    footer .store p,
-     .social a,
-     .contact p,
-     .contact a {
-        color: white;
-    }
-    
-    .store  {
-        padding-bottom: 20px;
-    }
-    
-    .store p, .location p {
-        padding-bottom: 5px;
-    }
-    
-    .contact a {
-        text-decoration: underline;
-    }
-    
-    .social span {
-        font-weight: lighter;
-    }
-    
-    .find-us,
-    .social {
-        padding:20px;
-    }
-    
-    .site-footer {
-        padding: 50px 30px;
-    }
-    
-    .find-us p,
-    .find-us a {
-        font-family: 'Playfair Display', 'Times New Roman', Times, serif;
-    }
-    
-    .location {
-        padding-top: 20px;
-    }
-    
-    .location p {
-        color: #969696; 
-    
-    }
-    
-    .footer-container {
-        display: flex;  
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin: 0 auto;
-        max-width: 1240px;
-    }
-    
-    .fab {
-        width:20px;
-        padding: 0 30px 15px 0;
-    } 
+
+footer {
+    background-color: #242424;
+    position: relative;
+}
+
+footer .store p,
+ .social a,
+ .contact p,
+ .contact a {
+    color: white;
+}
+
+.store  {
+    padding-bottom: 20px;
+}
+
+.store p, .location p {
+    padding-bottom: 5px;
+}
+
+.contact a {
+    text-decoration: underline;
+}
+
+.social span {
+    font-weight: lighter;
+}
+
+.find-us,
+.social {
+    padding:20px;
+}
+
+.site-footer {
+    padding: 50px 30px;
+}
+
+.find-us p,
+.find-us a {
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+}
+
+.location {
+    padding-top: 20px;
+}
+
+.location p {
+    color: #969696; 
+
+}
+
+.footer-container {
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1240px;
+}
+
+.fab {
+    width:20px;
+    padding: 0 30px 15px 0;
+} 
 
 
+} /* END OF @MEDIA 600 */
+
+/* BEGINNING OF @MEDIA 1240 */
 @media screen and (min-width: 1240px) {
     body {
         background-color: green;
@@ -509,6 +598,12 @@ max-height: 50px;
         margin: 0 auto; /* to center the element! */
     }
     
+    .carousel-cell {
+        width: 25%;
+        text-align: center;
+    }
     
     
 }
+
+/* END OF @MEDIA 1240*/

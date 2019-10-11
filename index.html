@@ -15,6 +15,10 @@
         integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Flickity CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- Flickity JavaScript -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -108,58 +112,85 @@
         </div>
     </section>
     <!-- end of shop section -->
-
+    
     <!-- beginner of featured section -->
     <section class="featured container" id="featured">
-        <h2 class="capital t-center">most-loved <span><strong>products</strong></span></h2>
-        <div class="products">
-            <img src="images/stretch-knit-dress.jpg" alt="picture of stretch-knit-dress">
-            <p class="uppercase">dresses</p>
-            <h3 class="capital">stretch knit dress</h3>
-            <p>$169.00</p>
+            <h2 class="capital t-center">most-loved <span><strong>products</strong></span></h2>
+    <div class="main-carousel">
+        <div class="carousel-cell">
+          <!-- product html here e.g. image, category, title & price  -->
+          <div class="products">
+                <img src="images/stretch-knit-dress.jpg" alt="picture of stretch-knit-dress">
+                <p class="uppercase">dresses</p>
+                <h3 class="capital">stretch knit dress</h3>
+                <p>$169.00</p>
+            </div>
         </div>
-        <div class="products">
-            <img src="images/cotton-blue-shirt.jpg" alt="picture of cotton-blue-shirt">
-            <p class="uppercase">shirts</p>
-            <h3 class="capital">cotton blue shirt</h3>
-            <p>$89.00</p>
+        <div class="carousel-cell">
+          <!-- product html here e.g. image, category, title & price  -->
+          <div class="products">
+                <img src="images/cotton-blue-shirt.jpg" alt="picture of cotton-blue-shirt">
+                <p class="uppercase">shirts</p>
+                <h3 class="capital">cotton blue shirt</h3>
+                <p>$89.00</p>
+            </div>
         </div>
-        <div class="products">
-            <img src="images/checked-stretch-dress.jpg" alt="picture of checked-stretch-dress">
-            <p class="uppercase">dresses</p>
-            <h3 class="capital">checked stretch dress</h3>
-            <p>$129.00</p>
+        <div class="carousel-cell">
+          <!-- product html here e.g. image, category, title & price  -->
+          <div class="products">
+                <img src="images/checked-stretch-dress.jpg" alt="picture of checked-stretch-dress">
+                <p class="uppercase">dresses</p>
+                <h3 class="capital">checked stretch dress</h3>
+                <p>$129.00</p>
+            </div>
         </div>
-        <div class="products">
-            <img src="images/blue-hipster-backpack.jpg" alt="picture of blue-hipster-backpack">
-            <p class="uppercase">bags</p>
-            <h3 class="capital">blue hipster backpack</h3>
-            <p>$99.00</p>
-        </div>
-        <div class="products">
-            <img src="images/demin-overall-shorts.jpg" alt="picture of denim-overall-shorts">
-            <p class="uppercase">denim</p>
-            <h3 class="capital">denim overall shorts</h3>
-            <p>$99.00</p>
-        </div>
-        <div class="products">
-            <img src="images/pink-dotted-dress.jpg" alt="picture of pink-dotted-dress">
-            <p class="uppercase">dresses</p>
-            <h3 class="capital">Pink Dotted Dress</h3>
-            <p>$99.00</p>
-        </div>
-        <div class="products">
-            <img src="images/blue-silk-dress.jpg" alt="picture of blue-silk-dress">
-            <p class="uppercase">dresses</p>
-            <h3 class="capital">blue silk dress</h3>
-            <p>$99.00</p>
-        </div>
-        <div class="products">
-            <img src="images/cotton-yellow-tshirt.jpg" alt="picture of cotton-yellow-tshirt">
-            <p class="uppercase">dresses</p>
-            <h3 class="capital">cotton yellow shirt</h3>
-            <p>$99.00</p>
-        </div>
+        <div class="carousel-cell">
+                <!-- product html here e.g. image, category, title & price  -->
+                <div class="products">
+                        <img src="images/blue-hipster-backpack.jpg" alt="picture of blue-hipster-backpack">
+                        <p class="uppercase">bags</p>
+                        <h3 class="capital">blue hipster backpack</h3>
+                        <p>$99.00</p>
+                    </div>
+            </div>
+        <div class="carousel-cell">
+                <!-- product html here e.g. image, category, title & price  -->
+                <div class="products">
+                        <img src="images/demin-overall-shorts.jpg" alt="picture of denim-overall-shorts">
+                        <p class="uppercase">denim</p>
+                        <h3 class="capital">denim overall shorts</h3>
+                        <p>$99.00</p>
+                    </div>
+            </div>
+        <div class="carousel-cell">
+                <!-- product html here e.g. image, category, title & price  -->
+                <div class="products">
+                        <img src="images/pink-dotted-dress.jpg" alt="picture of pink-dotted-dress">
+                        <p class="uppercase">dresses</p>
+                        <h3 class="capital">Pink Dotted Dress</h3>
+                        <p>$99.00</p>
+                    </div>
+            </div>
+        <div class="carousel-cell">
+                <!-- product html here e.g. image, category, title & price  -->
+                <div class="products">
+                        <img src="images/blue-silk-dress.jpg" alt="picture of blue-silk-dress">
+                        <p class="uppercase">dresses</p>
+                        <h3 class="capital">blue silk dress</h3>
+                        <p>$99.00</p>
+                    </div>
+            </div>
+        <div class="carousel-cell">
+                <!-- product html here e.g. image, category, title & price  -->
+                <div class="products">
+                        <img src="images/cotton-yellow-tshirt.jpg" alt="picture of cotton-yellow-tshirt">
+                        <p class="uppercase">dresses</p>
+                        <h3 class="capital">cotton yellow shirt</h3>
+                        <p>$99.00</p>
+                    </div>
+            </div>
+    </div>
+      
     </section>
     <!-- end of featured section -->
 
@@ -216,6 +247,7 @@
         </div>
     </footer>
     <!-- end of footer-->
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
