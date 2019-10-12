@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() { 
-console.log('hello world');
 //all of your code with go inside here
 
 // start of Flickity Slider
@@ -17,19 +16,18 @@ const emailForm = document.getElementsByClassName('email-form')[0];
 
 const emailBox = document.getElementsByClassName('email-area')[0];
 
-const submit = document.getElementsByClassName('sub-btn')[0];
-
-
 emailForm.addEventListener("submit", function(e) {
   e.preventDefault();
   
   // console.log('form submitted');
   const emailAdd = emailBox.value;
   // console.log(emailAdd);
-  if (emailAdd === ""){
+  if (emailAdd == ""){
     alert('Please enter your email address');
   } else {
     alert('Please wait for our future newsletters!');
+    // emailBox.append('');
+    // console.log(emailBox);
   }
 });
 
