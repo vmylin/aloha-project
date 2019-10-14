@@ -90,12 +90,18 @@ a {
 	background-color: rgba(179, 179, 179, 0.15);
 }
 
+.banner-desc,
+.shop-category a,
+.sign-up {
+	/* text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit;
+ */
+	text-shadow: .5em .1em 1em black;
+}
 
 /* breakpoint in 1240 and 600 and 500*/
 
 
 /* LAYOUT */
-
 .small-container {
 	width: 720px;
 	margin: 0 auto;
@@ -106,18 +112,20 @@ a {
 	text-align: center;
 }
 
-
 /* MOBILE SITE */
-
 
 /* HEADER AREA */
 
 .header-container {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+    justify-content: space-between;
 }
 
+.header-img,
+.cart-img {
+    margin: 1rem;
+}
 .header-img {
 	max-width: 120px;
 }
@@ -156,6 +164,7 @@ a {
 
 /* END OF HEADER AREA */
 
+/* MOBILE SITE */
 
 /* BANNER AREA */
 
@@ -188,6 +197,7 @@ a {
 
 /* END OF BANNER AREA */
 
+/* MOBILE SITE */
 
 /* ABOUT AREA */
 
@@ -208,6 +218,7 @@ a {
 
 /* END OF ABOUT AREA */
 
+/* MOBILE SITE */
 
 /* SHOP AREA */
 
@@ -220,7 +231,8 @@ a {
 .category {
 	width: 50%;
 	height: 50vw;
-	border: 3px solid white;
+	border-top: 3px solid white;
+    border-bottom: 3px solid white;    
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -237,6 +249,14 @@ a {
 	/* nth-of-type allows selecting 1 or more elements based on order in html*/
 	width: 100%;
 	height: 50vw;
+}
+.category:nth-of-type(2),
+.category:nth-of-type(4) {
+    border-right: 3px solid white;
+}
+.category:nth-of-type(3),
+.category:nth-of-type(5) {
+    border-left: 3px solid white;
 }
 
 .category-men {
@@ -285,18 +305,32 @@ a {
 
 /* END OF SHOP AREA */
 
+/* MOBILE SITE */
 
 /* FEATURED AREA */
 
 .featured {
-	padding: 110px 0;
+    padding-top: 50px;
+	padding-bottom: 110px;
+}
+
+.featured h2 {
+    padding-bottom: 3.5rem;    
 }
 
 .products img {
 	width: 60%;
 }
 
-
+.products p {
+    font-size: 1em;
+    font-weight: 400;
+    color: #969696;
+    padding: 1.5rem;
+}
+.products .uppercase {
+    font-size: .7em;
+}
 /* Flickity Slider */
 
 
@@ -307,16 +341,13 @@ a {
 	text-align: center;
 }
 
-
-/* hide disabled button */
-
-.flickity-button:disabled {
-	display: none;
+.main-carousel {
+    padding-bottom: 1.5rem;
 }
-
 
 /* END OF FEATURED AREA */
 
+/* MOBILE SITE */
 
 /* updates area */
 
@@ -352,10 +383,15 @@ a {
 	font-family: 'Raleway', Arial, Helvetica, sans-serif;
 }
 
+.email-form {
+	width: 90%;
+	margin: 0 auto;
+}
+
 .email-area {
 	font-size: 16px;
 	font-weight: lighter;
-	width: 400px;
+	width: 100%;
 	height: 45px;
 	padding: 0 20px;
 	border: 0;
@@ -371,14 +407,16 @@ a {
 	border: 0;
 	border-radius: 20px;
 	position: absolute;
-	right: 53px;
-	bottom: 3px;
+	right: 2rem;
+	top: .2rem;
 }
 
 input[type="submit"]:hover {
 	background-color: #b64036;
 }
+/* END OF UPDATE AREA*/
 
+/* MOBILE SITE */
 
 /* FOOTER AREA */
 
@@ -468,6 +506,7 @@ footer .store p,
 	padding: 0 30px 15px 0;
 }
 
+/* END OF FOOTER AREA */
 
 /* END OF MOBILE SITE */
 
@@ -487,7 +526,8 @@ footer .store p,
 		border-top: none;
 	}
 	.nav-bar li a {
-		padding: 20px 10px;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
 	}
 	.shopping-cart {
 		order: 1;
@@ -496,7 +536,8 @@ footer .store p,
 	/* START OF SHOP AREA */
 	.category {
 		width: 25%;
-		height: 25vw;
+        height: 25vw;
+        border: 3px solid white;
 	}
 	.category:nth-of-type(1),
 	.category:nth-of-type(4) {
@@ -515,13 +556,21 @@ footer .store p,
 	.carousel-cell {
 		width: 50%;
 		text-align: center;
-	}
+    }
+    
+    .products img {
+        width: 60%;
+    }
+    
 	/* END OF FEATURED AREA */
 	/* UPDATES AREA */
 	.wrapper {
 		max-width: 720px;
 		margin: 0 auto;
 	}
+
+
+	
 	/* END OF UPDATES AREA */
 	/* FOOTER AREA */
 	.site-footer {
@@ -605,11 +654,24 @@ footer .store p,
 		width: 1240px;
 		margin: 0 auto;
 		/* to center the element! */
-	}
+    }
+	
+	/* hero section */
+	.header-img,
+.cart-img {
+    margin: 0;
+}
+/* banner section */
+.banner {
+	background-size: contain, 709px;
+}
+/* featured section */
 	.carousel-cell {
 		width: 25%;
 		text-align: center;
-	}
+    }
+    
+/* featured section */
 	.featured {
 		padding: 110px 0;
 	}
@@ -618,12 +680,13 @@ footer .store p,
 	}
 	.updates {
 		background-size: 170vh;
-		margin: 0 20px 8px 20px;
+		margin: 0 20px 8px 0;
 		width: 100%;
 	}
+/* updates section */
+
+
 }
-
-
 /* END OF @MEDIA 1240*/
 
 /* END OF CSS */
